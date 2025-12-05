@@ -5,7 +5,6 @@ import LoginForm from "@/components/login-form"
 import RecipeList from "@/components/recipe-list"
 import RecipeForm from "@/components/recipe-form"
 import HeroBanner from "@/components/hero-banner"
-import RandomRecipe from "@/components/random-recipe"
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -82,13 +81,6 @@ export default function Home() {
               >
                 + Add New Recipe
               </button>
-              <RandomRecipe
-                userId={userId!}
-                onEdit={(recipe) => {
-                  setEditingRecipe(recipe)
-                  setShowForm(true)
-                }}
-              />
             </div>
 
             <RecipeList
